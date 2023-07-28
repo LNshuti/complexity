@@ -1,6 +1,6 @@
 # Country Complexity Rankings 1995 - 2021
 
-# Schema:
+# Schema
 
 **Country: The name of the country.**
 
