@@ -40,3 +40,8 @@ The Economic Complexity Index (ECI) and Complexity Outlook Index (COI) ranks are
 10. Republic of the Congo
 
 
+## Complexity Plot
+
+
+![image](plots/complexity_plot.png)
+
