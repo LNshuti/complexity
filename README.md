@@ -26,7 +26,7 @@ The Economic Complexity Index (ECI) and Complexity Outlook Index (COI) ranks are
 
 **Countries with the lowest ECI rank (i.e., the least economically complex) in 2021**
 
-| No. | Country        |
+| Rank. | Country        |
 | --- | -------------- |
 | 1   | Liberia          |
 | 2   | Guinea    |
