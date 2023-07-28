@@ -13,7 +13,7 @@ The country's rank is based on the Economic Complexity Index (ECI) for each year
 The dataset spans from 1995 to 2021, inclusive.
 The Economic Complexity Index (ECI) and Complexity Outlook Index (COI) ranks are provided for each country and each year. A lower rank indicates a higher complexity or outlook.
 
-**The top 10 countries with the highest ECI rank (i.e., the most economically complex) in 2021** 
+** 10 countries with the highest ECI rank (i.e., the most economically complex) in 2021** 
 
 1. Japan
 2. Switzerland
@@ -26,7 +26,7 @@ The Economic Complexity Index (ECI) and Complexity Outlook Index (COI) ranks are
 9. Slovenia
 10. Sweden
 
-**The top 10 countries with the lowest ECI rank (i.e., the least economically complex) in 2021**
+** 10 countries with the lowest ECI rank (i.e., the least economically complex) in 2021**
 
 1. Liberia
 2. Guinea
