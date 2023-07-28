@@ -18,10 +18,6 @@ The Economic Complexity Index (ECI) and Complexity Outlook Index (COI) ranks are
 | Rank. | Country        |
 | --- | -------------- |
 | 1   | Japan          |
-
-
-
-
 | 2   | Switzerland    |
 | 3   | South Korea    |
 | 4   | Germany        |
