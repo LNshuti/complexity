@@ -14,6 +14,7 @@ library(RColorBrewer)
 library(ggrepel)
 library(magrittr)
 library(ggplot2)
+library(viridis)
 
 
 
@@ -89,8 +90,8 @@ plot_complexity_ranks <-
                   show.legend = FALSE) +
   scale_color_viridis(discrete = TRUE) +
   theme_minimal() + 
-  labs(title = "Ranking Countries by Economic Complexity Over Time",
-       x = "Year",
+  labs(title = "",
+       x = "",
        y = "Rank",
        color = "Country") + 
   guides(color = FALSE) 
