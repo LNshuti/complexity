@@ -13,7 +13,7 @@ The country's rank is based on the Economic Complexity Index (ECI) for each year
 The dataset spans from 1995 to 2021, inclusive.
 The Economic Complexity Index (ECI) and Complexity Outlook Index (COI) ranks are provided for each country and each year. A lower rank indicates a higher complexity or outlook.
 
-**Five countries with the highest ECI rank (i.e., the most economically complex) in 2021** 
+**Countries with the highest ECI rank (i.e., the most economically complex) in 2021** 
 
 | Rank. | Country        |
 | --- | -------------- |
@@ -24,7 +24,7 @@ The Economic Complexity Index (ECI) and Complexity Outlook Index (COI) ranks are
 | 5   | Sweden         |
 
 
-**Ten countries with the lowest ECI rank (i.e., the least economically complex) in 2021**
+**Countries with the lowest ECI rank (i.e., the least economically complex) in 2021**
 
 | No. | Country        |
 | --- | -------------- |
