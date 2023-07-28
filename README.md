@@ -18,6 +18,10 @@ The Economic Complexity Index (ECI) and Complexity Outlook Index (COI) ranks are
 | Rank. | Country        |
 | --- | -------------- |
 | 1   | Japan          |
+
+
+
+
 | 2   | Switzerland    |
 | 3   | South Korea    |
 | 4   | Germany        |
@@ -28,11 +32,11 @@ The Economic Complexity Index (ECI) and Complexity Outlook Index (COI) ranks are
 
 | Rank. | Country        |
 | --- | -------------- |
-| 1   | Liberia          |
-| 2   | Guinea    |
-| 3   | Papua New Guinea    |
-| 4   | Nigeria        |
-| 5   | Libya         |
+| 133   | Liberia          |
+| 132   | Guinea    |
+| 130   | Papua New Guinea    |
+| 128   | Nigeria        |
+| 119   | Libya         |
 
 
 ![Rplot](https://github.com/LNshuti/complexity/assets/13305262/678fe61d-b7d1-469c-9a4e-dc8b5f8d3f0a)
