@@ -39,7 +39,8 @@ The Economic Complexity Index (ECI) and Complexity Outlook Index (COI) ranks are
 9. Mauritania
 10. Republic of the Congo
 
-![Rplot](https://github.com/LNshuti/complexity/assets/13305262/55febe77-f724-4324-9eb3-90cf14b28aac)
+![Screenshot 2023-07-28 at 8 14 02 AM](https://github.com/LNshuti/complexity/assets/13305262/192fa9e9-eff0-47b7-b029-b778303f4099)
+
 
 
 
