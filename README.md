@@ -3,18 +3,13 @@
 # Schema:
 
 **Country: The name of the country.**
-**ECI Rank 1995 - ECI Rank 2021:** The country's rank is based on the Economic Complexity Index (ECI) for each year from 1995 to 2021. The ECI is a holistic measure of the production characteristics of large economic systems, usually cities, regions, or countries. Typically, economically diversified and sophisticated countries have higher ECI values.
+
+**ECI Rank 1995 - ECI Rank 2021:** 
+The country's rank is based on the Economic Complexity Index (ECI) for each year from 1995 to 2021. The ECI is a holistic measure of the production characteristics of large economic systems, usually cities, regions, or countries. Typically, economically diversified and sophisticated countries have higher ECI values.
+
 **COI Rank 1995 - COI Rank 2021:** The country's rank is based on the Complexity Outlook Index (COI) for each year from 1995 to 2021. The COI indicates the potential for future growth and economic development.
 
 # Exploratory data analysis
-
- Describe the data to understand the dataset's distribution's central tendency, dispersion, and shape.
-Identify the top 10 countries with the highest ECI rank in 2021.
-Identify the top 10 countries with the lowest ECI rank in 2021.
-
-
-# Summary of the dataset:
-
 The dataset spans from 1995 to 2021, inclusive.
 The Economic Complexity Index (ECI) and Complexity Outlook Index (COI) ranks are provided for each country and each year. A lower rank indicates a higher complexity or outlook.
 
