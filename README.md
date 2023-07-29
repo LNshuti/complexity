@@ -24,7 +24,8 @@ The Economic Complexity Index (ECI) and Complexity Outlook Index (COI) ranks are
 | 5   | Sweden         |
 
 
-**Figure 1. Japanese Exports**
+**Figure 1. 2021 Japanese Exports**
+
 ![image](https://github.com/LNshuti/complexity/assets/13305262/2505084e-a583-47a0-8173-b7a68750c969)
 
 
