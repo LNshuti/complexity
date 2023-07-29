@@ -41,6 +41,13 @@ The Economic Complexity Index (ECI) and Complexity Outlook Index (COI) ranks are
 | 119   | Libya         |
 
 
+**Figure 2. 2021 Nigerian Exports**
+
+![image](https://github.com/LNshuti/complexity/assets/13305262/ddff4e8c-3f15-44a3-808d-51ca6f4c2ac0)
+
+
+
+
 ![Rplot](https://github.com/LNshuti/complexity/assets/13305262/678fe61d-b7d1-469c-9a4e-dc8b5f8d3f0a)
 
 
