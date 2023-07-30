@@ -48,7 +48,7 @@ The Economic Complexity Index (ECI) and Complexity Outlook Index (COI) ranks are
 
 
 
-![Rplot](https://github.com/LNshuti/complexity/assets/13305262/09665fe0-974d-4544-9d0c-afc4d8235c2e)
+![Rplot](https://github.com/LNshuti/complexity/assets/13305262/dab98cc5-87bf-4ea2-be38-a23661123aca)
 
 
 
