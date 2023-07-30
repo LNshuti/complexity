@@ -16,8 +16,6 @@ library(magrittr)
 library(ggplot2)
 library(viridis)
 
-
-
 # Load the country complexity data
 country_data <- read.csv('data/Country_Complexity_Rankings_1995_2021.csv')
 
@@ -54,7 +52,7 @@ top_countries_eci <-
   select(country, values) %>% 
   unique() %>%
   arrange(desc(values)) %>% 
-  head(5) %>% 
+  head(3) %>% 
   pull(country) %>% 
   unique()
 
@@ -64,21 +62,22 @@ bottom_countries_eci <-
   select(country, values) %>% 
   unique() %>%
   arrange(values) %>% 
-  head(9) %>% 
+  head(3) %>% 
   pull(country) %>% 
   unique()
 
-  
+advancing_countries <- c("Ethiopia", "Vietnam")
+
 # Filter data for top and bottom countries
 data_filtered <- 
   data_coi_eci_long %>% 
   filter(measure == "eci_rank") %>%
-  filter(country %in% c(top_countries_eci, bottom_countries_eci))
+  filter(country %in% c(top_countries_eci, bottom_countries_eci, advancing_countries))
 
 # Filter the data for the last year
 data_last_year <- 
   data_filtered %>%
-  filter(year == max(year))
+  filter(year == max(year)) 
 
 # Create the plot
 plot_complexity_ranks <- 
@@ -86,9 +85,8 @@ plot_complexity_ranks <-
   geom_line() +
   geom_text_repel(data = data_last_year, 
                   aes(label = country), 
-                  nudge_x = 1.5, 
+                  nudge_x = 1.2, 
                   show.legend = FALSE) +
-  scale_color_viridis(discrete = TRUE) +
   theme_minimal() + 
   labs(title = "",
        x = "",
@@ -100,6 +98,17 @@ plot_complexity_ranks <-
 plot_complexity_ranks %>% 
   ggsave("plots/complexity_plot.png", dpi = 100, width = 4, height = 4)
 
+
+
+# reorder is close to order, but is made to change the order of the factor levels.
+mpg$class = with(mpg, reorder(class, hwy, median))
+
+p <- mpg %>%
+  ggplot( aes(x=class, y=hwy, fill=class)) + 
+  geom_violin() +
+  xlab("class") +
+  theme(legend.position="none") +
+  xlab("")
 
 
 
