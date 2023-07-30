@@ -15,6 +15,7 @@ library(ggrepel)
 library(magrittr)
 library(ggplot2)
 library(viridis)
+library(glue)
 
 # Load the country complexity data
 country_data <- read.csv('data/Country_Complexity_Rankings_1995_2021.csv')
@@ -72,7 +73,9 @@ advancing_countries <- c("Ethiopia", "Vietnam")
 data_filtered <- 
   data_coi_eci_long %>% 
   filter(measure == "eci_rank") %>%
-  filter(country %in% c(top_countries_eci, bottom_countries_eci, advancing_countries))
+  filter(country %in% c(top_countries_eci, bottom_countries_eci, advancing_countries)) %>% 
+  mutate(country_label = glue("{country} is ranked {values}"))
+
 
 # Filter the data for the last year
 data_last_year <- 
@@ -84,7 +87,7 @@ plot_complexity_ranks <-
   ggplot(data_filtered, aes(x = year, y = values, color = country, group=country)) +
   geom_line() +
   geom_text_repel(data = data_last_year, 
-                  aes(label = country), 
+                  aes(label = country_label), 
                   nudge_x = 1.2, 
                   show.legend = FALSE) +
   theme_minimal() + 
