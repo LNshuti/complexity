@@ -67,14 +67,15 @@ bottom_countries_eci <-
   pull(country) %>% 
   unique()
 
-advancing_countries <- c("Ethiopia", "Vietnam")
+advancing_countries <- c("Ethiopia", "Vietnam", "Kenya", "Egypt", "Uganda",
+                         "Mexico", "Brazil", "China", "Singapore", "Korea", "Taiwan")
 
 # Filter data for top and bottom countries
 data_filtered <- 
   data_coi_eci_long %>% 
   filter(measure == "eci_rank") %>%
-  filter(country %in% c(top_countries_eci, bottom_countries_eci, advancing_countries)) %>% 
-  mutate(country_label = glue("{country} is ranked {values}"))
+  filter(country %in% advancing_countries) %>% 
+  mutate(country_label = glue("{country}, rank {values}"))
 
 
 # Filter the data for the last year
@@ -85,18 +86,15 @@ data_last_year <-
 # Create the plot
 plot_complexity_ranks <- 
   ggplot(data_filtered, aes(x = year, y = values, color = country, group=country)) +
+  geom_point() +
   geom_line() +
   geom_text_repel(data = data_last_year, 
                   aes(label = country_label), 
-                  nudge_x = 1.2, 
+                  nudge_x = 1.5, 
                   show.legend = FALSE) +
-  theme_minimal() + 
-  labs(title = "",
-       x = "",
-       y = "Rank",
-       color = "Country") + 
+  ggthemes::theme_tufte() + 
+  labs(title = "", x = "", y = "Rank", color = "Country") + 
   guides(color = FALSE) 
-
 
 plot_complexity_ranks %>% 
   ggsave("plots/complexity_plot.png", dpi = 100, width = 4, height = 4)
