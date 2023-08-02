@@ -67,8 +67,8 @@ bottom_countries_eci <-
   pull(country) %>% 
   unique()
 
-advancing_countries <- c("Ethiopia", "Vietnam", "Kenya", "Egypt", "Uganda",
-                         "Mexico", "Brazil", "China", "Singapore", "Korea", "Taiwan")
+advancing_countries <- c("Ethiopia", "Vietnam", "Kenya", "Egypt", "Uganda", "Poland", "Italy",
+                         "Mexico", "Brazil", "China", "Singapore", "Korea", "Taiwan", "Germany")
 
 # Filter data for top and bottom countries
 data_filtered <- 
@@ -96,21 +96,5 @@ plot_complexity_ranks <-
   labs(title = "", x = "", y = "Rank", color = "Country") + 
   guides(color = FALSE) 
 
-plot_complexity_ranks %>% 
-  ggsave("plots/complexity_plot.png", dpi = 100, width = 4, height = 4)
-
-
-
-# reorder is close to order, but is made to change the order of the factor levels.
-p <- 
-  data_filtered %>%
-  ggplot( aes(x=year, y=values, color=country, group=country)) + 
-  geom_line() +
-  xlab("year") +
-  theme(legend.position="none") +
-  xlab("")
-
-
-
-
-  
+plot_complexity_ranks #%>% 
+  #ggsave("plots/complexity_plot.png", dpi = 100, width = 4, height = 4)
