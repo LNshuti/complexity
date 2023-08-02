@@ -48,8 +48,7 @@ The Economic Complexity Index (ECI) and Complexity Outlook Index (COI) ranks are
 
 **Figure 3. Complexity Rankings**
 
-![Rplot](https://github.com/LNshuti/complexity/assets/13305262/dab98cc5-87bf-4ea2-be38-a23661123aca)
-
+![dynamic_countries](https://github.com/LNshuti/complexity/assets/13305262/f2e2e4ce-72d8-4250-8136-4fbf2044f305)
 
 **Figure 4. 2021 Switzerland Exports**
 
