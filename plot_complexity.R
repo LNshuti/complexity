@@ -67,16 +67,11 @@ bottom_countries_eci <-
   pull(country) %>% 
   unique()
 
-advancing_countries <- c("Ethiopia", "Vietnam", "Kenya", "Egypt", "Uganda", "Poland", "Italy",
-                         "Mexico", "Brazil", "China", "Singapore", "Korea", "Taiwan", "Germany")
-
 # Filter data for top and bottom countries
 data_filtered <- 
   data_coi_eci_long %>% 
   filter(measure == "eci_rank") %>%
-  filter(country %in% advancing_countries) %>% 
   mutate(country_label = glue("{country}, rank {values}"))
-
 
 # Filter the data for the last year
 data_last_year <- 
@@ -98,3 +93,66 @@ plot_complexity_ranks <-
 
 plot_complexity_ranks #%>% 
   #ggsave("plots/complexity_plot.png", dpi = 100, width = 4, height = 4)
+
+# BRICS
+brics <- 
+  data_filtered %>% 
+  filter(country %in% c("Brazil", "China", "India",  "South Africa", "Russia", "United States of America"))
+
+data_last_year_brics <- 
+  brics %>%
+  filter(year == max(year)) 
+
+brics_complexity <- 
+  ggplot(brics, aes(x = year, y = values, color = country, group=country)) +
+  geom_point() +
+  geom_line() +
+  geom_text_repel(data = data_last_year_brics, 
+                  aes(label = country_label), 
+                  nudge_x = 1.2, 
+                  show.legend = FALSE) +
+  ggthemes::theme_tufte() + 
+  labs(title = "", x = "", y = "Complexity Rank", color = "Country") + 
+  guides(color = FALSE) 
+
+gdp_ppp <- 
+  read_csv("data/API_NY.GDP.PCAP.PP.CD_DS2_en_csv_v2_5728866.csv", skip = 3) %>%
+  janitor::clean_names() %>% 
+  filter(country_name %in% c("Brazil", "China", "India",  "South Africa", "Russia", "United States"))
+
+# Get the maximum year available in your dataset
+max_year <- max(as.numeric(gsub("x", "", names(gdp_ppp)[-(1:4)])))  # Extract year from column names and find max
+
+# Select only the columns from 1990 to the max year
+selected_columns <- c("country_name", "country_code", "indicator_name", "indicator_code",
+                      paste0("x", 1990:max_year))  # Create a vector of column names to keep
+
+# Use the select() function to keep only the selected columns
+df_selected <- select(gdp_ppp, all_of(selected_columns))
+
+# Reshape the data to long format
+data_long <- gather(df_selected, key = "year", value = "gdp_per_capita", starts_with("x"))
+
+# Convert the 'year' column to numeric (removing the 'x' prefix)
+data_long$year <- as.numeric(gsub("x", "", data_long$year))
+
+# Plot the time series
+gdp_percap_brics <- 
+  ggplot(data_long, aes(x = year, y = gdp_per_capita, color = country_name)) +
+  geom_line() +
+  labs(x = "Year", y = "GDP per Capita", color = "Country") +
+  theme_minimal()
+
+library(gridExtra)
+
+# Assuming you have ggplot1 and ggplot2 as your two ggplot objects with different titles
+
+# Create the combined plot
+combined_plot <- grid.arrange(
+  brics_complexity + labs(title = "BRICS complexity"),
+  gdp_percap_brics + labs(title = "BICS GDP per Capita PPP"),
+  ncol = 1  # Set the number of columns in the grid to 1 (stack the plots vertically)
+)
+
+# Print or display the combined plot
+print(combined_plot)
