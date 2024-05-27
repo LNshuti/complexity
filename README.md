@@ -54,6 +54,6 @@ The Economic Complexity Index (ECI) and Complexity Outlook Index (COI) ranks are
 
 ![switzerland_exports](https://github.com/LNshuti/complexity/assets/13305262/0e63dfb8-7986-4c05-8e22-606b6e59f279)
 
-**Figure 5. 2021 Brazil Exports**
+**Figure 5**
 ![image](https://github.com/LNshuti/complexity/assets/13305262/27e64a7c-be85-4adf-bdf4-035940f1c64f)
 
