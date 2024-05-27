@@ -57,3 +57,6 @@ The Economic Complexity Index (ECI) and Complexity Outlook Index (COI) ranks are
 **Figure 5**
 ![image](https://github.com/LNshuti/complexity/assets/13305262/27e64a7c-be85-4adf-bdf4-035940f1c64f)
 
+# References
+**1. The Growth Lab at Harvard University. International Trade Data (SITC, Rev. 2). 2019-05-31. 2019. V5. Harvard Dataverse. URL. https://doi.org/10.7910/DVN/H8SFD2. doi/10.7910/DVN/H8SFD2**
+
